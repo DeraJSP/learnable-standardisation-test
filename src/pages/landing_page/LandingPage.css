@@ -1,0 +1,31 @@
+.darknavwrap {
+	background-color: #23856d;
+}
+
+.darknav {
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1439px;
+	height: 58px;
+	margin: 0 auto;
+}
+
+.darknav div,
+.darknav img {
+	display: flex;
+}
+
+.darknav img {
+	width: 16px;
+	margin-left: 15px;
+}
+
+.contact img {
+	margin-right: 5px;
+}
+
+.phone {
+	margin-right: 25px;
+}
