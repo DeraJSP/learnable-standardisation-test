@@ -212,62 +212,88 @@ export default function MainSection() {
 			</section>
 			<section>
 				<div className="reviewwrap">
-					<div className="reviewer">
-						<h3>What they say about us</h3>
-						<img
-							src={require("../../assets/landing_page/reviewerpic.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/stars.svg")}
-							alt=""
-						/>
-						<h6>
-							Slate helps you see how many more days you need to
-							work to reach your financial goal.
-						</h6>
-						<Link to="">
-							<p>Regina Miles</p>
-						</Link>
-						<h6>Designer</h6>
+					<div className="review">
+						<div className="reviewer">
+							<div>
+								<h6>What they say about us</h6>
+								<img
+									className="reviewerpic"
+									src={require("../../assets/landing_page/reviewerpic.svg")}
+									alt=""
+								/>
+							</div>
+							<div>
+								<img
+									className="stars"
+									src={require("../../assets/landing_page/stars.svg")}
+									alt=""
+								/>
+							</div>
+							<h6 className="slate">
+								Slate helps you see how many more days you need
+								to work to reach your financial goal.
+							</h6>
+							<Link to="">
+								<p>Regina Miles</p>
+								<h6 className="role">Designer</h6>
+							</Link>
+						</div>
+						<div className="imagegrid">
+							<img
+								src={require("../../assets/landing_page/camera.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/womanscarf.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/alley.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/cream.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/womanpose.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/writing.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/mountain.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/highangle.svg")}
+								alt=""
+							/>
+							<img
+								src={require("../../assets/landing_page/glasswall.svg")}
+								alt=""
+							/>
+						</div>
 					</div>
-					<div>
-						<img
-							src={require("../../assets/landing_page/camera.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/womanscarf.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/alley.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/cream.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/womanpose.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/writing.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/mountain.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/highangle.svg")}
-							alt=""
-						/>
-						<img
-							src={require("../../assets/landing_page/glasswall.svg")}
-							alt=""
-						/>
+				</div>
+			</section>
+			<section>
+				<div className="utensilswrap">
+					<div className="utensils">
+						<h6>Designing Better Experience</h6>
+						<h2>
+							Problems trying to resolve the conflict between{" "}
+						</h2>
+						<p>
+							Problems trying to resolve the conflict between the
+							two major realms of Classical physics:{" "}
+						</p>
+						<h3>$16.48</h3>
+						<button className="utensilsbtn">
+							<p>ADD YOUR CALL TO ACTION</p>
+						</button>
 					</div>
 				</div>
 			</section>
