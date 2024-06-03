@@ -38,9 +38,9 @@ const ProductDetails = () => {
         <button>
           <span>Select Options</span>
         </button>
-        <img src={require("../../assets/landing_page/phone.svg")} alt="" />
-        <img src={require("../../assets/landing_page/phone.svg")} alt="" />
-        <img src={require("../../assets/landing_page/phone.svg")} alt="" />
+        <img src={require("../../assets/product_details/like.svg")} alt="" />
+        <img src={require("../../assets/product_details/basket.svg")} alt="" />
+        <img src={require("../../assets/product_details/mores.svg")} alt="" />
       </div>
     </div>
   );
