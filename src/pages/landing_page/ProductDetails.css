@@ -1,0 +1,55 @@
+.product-img {
+	width: 300px;
+}
+
+.product-view {
+	display: flex;
+}
+
+.rating,
+.colors {
+	display: flex;
+	align-content: center;
+}
+
+.colors div {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.blue {
+	background-color: #23a6f0;
+}
+
+.green {
+	background-color: #2dc071;
+}
+
+.orange {
+	background-color: #e77c40;
+}
+
+.black {
+	background-color: black;
+}
+
+button span {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 24px;
+	letter-spacing: 0.20000000298023224px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.product-view button {
+	width: 148px;
+	height: 44px;
+	padding: 10px 20px 10px 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #23a6f0;
+	color: white;
+}
