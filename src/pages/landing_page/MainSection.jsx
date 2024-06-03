@@ -11,11 +11,6 @@ export default function MainSection() {
 							src={require("../../assets/landing_page/furniture1.svg")}
 							alt=""
 						/>
-						<div className="firstoverlay">
-							<h6 className="items">5 Items</h6>
-							<h2>FURNITURE</h2>
-							<h6>Read More</h6>
-						</div>
 					</div>
 					<div className="secondcolumn">
 						<div>
@@ -23,11 +18,6 @@ export default function MainSection() {
 								src={require("../../assets/landing_page/furniture2.svg")}
 								alt=""
 							/>
-							<div className="secondoverlay">
-								<h6 className="items">5 Items</h6>
-								<h2>FURNITURE</h2>
-								<h6>Read More</h6>
-							</div>
 						</div>
 						<div className="thirdsection">
 							<div>
@@ -35,22 +25,12 @@ export default function MainSection() {
 									src={require("../../assets/landing_page/furniture3.svg")}
 									alt=""
 								/>
-								<div className="thirdoverlay">
-									<h6 className="items">5 Items</h6>
-									<h2>FURNITURE</h2>
-									<h6>Read More</h6>
-								</div>
 							</div>
 							<div>
 								<img
 									src={require("../../assets/landing_page/furniture4.svg")}
 									alt=""
 								/>
-								<div className="fourthoverlay">
-									<h6 className="items">5 Items</h6>
-									<h2>FURNITURE</h2>
-									<h6>Read More</h6>
-								</div>
 							</div>
 						</div>
 					</div>
