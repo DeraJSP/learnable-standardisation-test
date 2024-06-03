@@ -13,6 +13,10 @@
 	margin: 0 auto;
 }
 
+.lightnav {
+	position: sticky;
+}
+
 .darknav div,
 .darknav img,
 .lightnav div,
@@ -76,10 +80,6 @@ a {
 	width: 16px;
 }
 
-.lightnav {
-	border: 2px solid red;
-}
-
 /*Hero section*/
 
 .herocontent {
@@ -89,7 +89,6 @@ a {
 	height: 776pxpx;
 	padding: 80px 0px 80px 0px;
 	gap: 12px;
-	border: 2px solid red;
 }
 
 .firstcolumn img {

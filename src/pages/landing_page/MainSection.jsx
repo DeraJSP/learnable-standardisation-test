@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ProductsList from "./ProductsList";
 
 export default function MainSection() {
 	return (
@@ -54,6 +55,9 @@ export default function MainSection() {
 						</div>
 					</div>
 				</div>
+			</section>
+			<section>
+				<ProductsList />
 			</section>
 			<section>
 				<div className="featurewrap">
