@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import * as LandingImages from "../../components/LandingImages";
+// import * as LandingImages from "../../components/LandingImages";
 // import Importer from "../../components/Importer";
 
 export default function NavBar() {
@@ -47,35 +46,59 @@ export default function NavBar() {
 						</div>
 					</div>
 				</div>
-				<div>
-					<div>
-						<p>Bandage</p>
-					</div>
-					<div>
-						<Link to="">
-							<p>Home</p>
-						</Link>
-						<Link to="">
-							<p>Shop</p> <img src="" alt="" />
-						</Link>
-						<Link to="">
-							<p>About</p>
-						</Link>
-						<Link to="">
-							<p>Blog</p>
-						</Link>
-						<Link to="">
-							<p>Contact</p>
-						</Link>
-						<Link to="">
-							<p>Pages</p>
-						</Link>
-					</div>
-					<div>
-						<Link to=""></Link>
-						<img src="" alt="" />
-						<img src="" alt="" />
-						<img src="" alt="" />
+				<div className="lightnavwrap">
+					<div className="lightnav">
+						<div className="sitesections">
+							<h3 className="logo">Bandage</h3>
+
+							<Link to="">
+								<p>Home</p>
+							</Link>
+							<Link to="">
+								<p>Shop</p>
+							</Link>
+							<Link to="">
+								<p>About</p>
+							</Link>
+							<Link to="">
+								<p>Blog</p>
+							</Link>
+							<Link to="">
+								<p>Contact</p>
+							</Link>
+							<Link to="">
+								<p>Pages</p>
+							</Link>
+						</div>
+						<div className="userarea">
+							<div className="login">
+								<img
+									src={require("../../assets/landing_page/user.svg")}
+									alt="user"
+								/>
+								<Link to="">
+									<p>Login / Register</p>
+								</Link>
+							</div>
+							<div>
+								<img
+									src={require("../../assets/landing_page/search.svg")}
+									alt="search"
+								/>
+							</div>
+							<div>
+								<img
+									src={require("../../assets/landing_page/cart.svg")}
+									alt="cart"
+								/>
+							</div>
+							<div>
+								<img
+									src={require("../../assets/landing_page/fav.svg")}
+									alt="favourite"
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</nav>
