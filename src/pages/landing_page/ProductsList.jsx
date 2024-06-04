@@ -45,7 +45,6 @@ const ProductsList = () => {
             <div key={product.id} className="product">
               <div className="product-info">
                 <img src={product.images} alt={product.title} />
-
                 <h5>{product.title}</h5>
                 <p>{product.category}</p>
                 <p className="price">${product.price} </p>

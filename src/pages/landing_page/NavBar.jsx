@@ -86,12 +86,12 @@ export default function NavBar() {
 									alt="search"
 								/>
 							</div>
-							<div>
+							<Link to="/Cart">
 								<img
 									src={require("../../assets/landing_page/cart.svg")}
 									alt="cart"
 								/>
-							</div>
+							</Link>
 							<div>
 								<img
 									src={require("../../assets/landing_page/fav.svg")}

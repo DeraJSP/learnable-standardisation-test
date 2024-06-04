@@ -2,6 +2,8 @@ import { useState } from "react";
 import LandingPage from "./pages/landing_page/LandingPage";
 import ProductsList from "./pages/landing_page/ProductsList";
 import ProductDetails from "./pages/landing_page/ProductDetails";
+import Cart from "./pages/cart/Cart";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
@@ -11,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/product/:id",
     element: <ProductDetails />,
+  },
+  {
+    path: "/Cart",
+    element: <Cart />,
   },
 ]);
 
