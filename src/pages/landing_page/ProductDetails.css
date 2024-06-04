@@ -1,9 +1,21 @@
 .product-img {
-	width: 300px;
+	width: 510px;
 }
 
 .product-view {
 	display: flex;
+	justify-content: center;
+	gap: 80px;
+}
+
+.crumbs .home {
+	font-weight: 700;
+}
+
+.crumbs .arrow,
+.shop {
+	font-weight: 700;
+	color: gray;
 }
 
 .rating,
@@ -16,6 +28,7 @@
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
+	margin: 70px 10px 30px 0;
 }
 
 .blue {
@@ -44,6 +57,11 @@ button span {
 	align-items: center;
 }
 
+.select button,
+.select img {
+	margin-right: 20px;
+}
+
 .product-view button {
 	width: 148px;
 	height: 44px;
@@ -52,4 +70,23 @@ button span {
 	border: none;
 	background-color: #23a6f0;
 	color: white;
+}
+
+.longpara {
+	display: flex;
+	margin: 90px 0 90px 0;
+	justify-content: center;
+}
+
+.para {
+	width: 599px;
+	height: 327px;
+	margin-right: 80px;
+}
+
+.sponsors {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-bottom: 50px;
 }

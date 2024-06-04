@@ -33,6 +33,11 @@ const ProductDetails = () => {
     <>
       <NavBar />
       <div className="product-view">
+        <div className="crumbs">
+          <span className="home">Home</span>&nbsp;&nbsp;
+          <span className="arrow">></span>&nbsp; &nbsp;
+          <span className="shop">shop</span>
+        </div>
         <img className="product-img" src={data?.images} alt={data?.title} />
         <div className="product-details">
           <h4>{data.title}</h4>
@@ -52,21 +57,55 @@ const ProductDetails = () => {
             <div className="orange"></div>
             <div className="black"></div>
           </div>
-          <button>
-            <span>Select Options</span>
-          </button>
-          <img src={require("../../assets/product_details/like.svg")} alt="" />
-          <button onClick={handleAddToCart}>
+          <div className="select">
+            <button className="options">
+              <span>Select Options</span>
+            </button>
             <img
+              src={require("../../assets/product_details/like.svg")}
+              alt=""
+            />
+            <img
+              onClick={handleAddToCart}
               src={require("../../assets/product_details/basket.svg")}
               alt=""
             />
-          </button>
 
-          <img src={require("../../assets/product_details/more.svg")} alt="" />
+            <img
+              src={require("../../assets/product_details/more.svg")}
+              alt=""
+            />
+          </div>
         </div>
       </div>
+      <div className="longpara">
+        <div className="para">
+          <p>
+            <h2>the quick fox jumps over</h2> Met minim Mollie non desert Alamo
+            est sit cliquey dolor do met sent. RELIT official consequent door
+            ENIM RELIT Mollie. Excitation venial consequent sent nostrum met.
+            Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
+            RELIT official consequent door ENIM RELIT Mollie. Excitation venial
+            consequent sent nostrum met. Met minim Mollie non desert Alamo est
+            sit cliquey dolor do met sent. RELIT official consequent door ENIM
+            RELIT Mollie. Excitation venial consequent sent nostrum met.
+          </p>
+        </div>
+        <img src={require("../../assets/product_details/ikea.svg")} alt="" />
+      </div>
+
       <ProductsList />
+      <div className="sponsors">
+        <img src={require("../../assets/product_details/hooli.svg")} alt="" />
+        <img src={require("../../assets/product_details/lya.svg")} alt="" />
+        <img
+          src={require("../../assets/product_details/piedpiper.svg")}
+          alt=""
+        />
+        <img src={require("../../assets/product_details/stripe.svg")} alt="" />
+        <img src={require("../../assets/product_details/aws.svg")} alt="" />
+        <img src={require("../../assets/product_details/reddit.svg")} alt="" />
+      </div>
       <Footer />
     </>
   );

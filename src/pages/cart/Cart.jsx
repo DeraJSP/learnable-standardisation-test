@@ -4,6 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, removeFromCart } from "./CartSlice";
 import NavBar from "../landing_page/NavBar";
 import Footer from "../landing_page/Footer";
+import ProductsList from "../landing_page/ProductsList";
+
+import "./cart.css";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart.items);
@@ -15,7 +18,6 @@ function Cart() {
       .reduce((total, item) => total + item.price * item.quantity, 0)
       .toFixed(2);
   };
-
   console.log(cartItems);
 
   return (
@@ -23,28 +25,53 @@ function Cart() {
       <NavBar />
       <main>
         <section>
-          <h1>Shopping Cart</h1>
-          <table>
-            <thead>
-              <tr>
-                <th>Item Detail</th>
-                <th>Quantity</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cartItems.map((item) => (
-                <tr key={item.id}>
-                  <td>
-                    <div>
-                      <img src={item.thumbnail} alt={item.title} />
+          <div className="crumbs">
+            <span className="home">Home</span>&nbsp;&nbsp;
+            <span className="arrow">></span>&nbsp; &nbsp;
+            <span className="shop">shop</span>&nbsp; &nbsp;
+            <span className="arrow">></span>&nbsp; &nbsp;
+            <span className="cart">shopping cart</span>
+          </div>
+          <div className="cartsummary">
+            <p>Shopping Cart</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Item Detail</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cartItems.map((item) => (
+                  <tr key={item.id}>
+                    <td>
                       <div>
-                        <h3>{item.title}</h3>
-                        <p>{item.availabilityStatus}</p>
-                        <p>
-                          Rating: {item.rating} ({item.numReviews} reviews)
-                        </p>
+                        <div className="itemdetailswrap">
+                          <img
+                            className="cartthumb"
+                            src={item.thumbnail}
+                            alt={item.title}
+                          />
+                          <div className="itemdetails">
+                            <h3>{item.title}</h3>
+                            <p className="available">
+                              {item.availabilityStatus}
+                            </p>
+                            <div className="rating">
+                              <p>
+                                Rating: {item.rating} ({item.numReviews}{" "}
+                                reviews)
+                              </p>
+                              <img
+                                src={require("../../assets/landing_page/stars.svg")}
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
                         <button
+                          className="remove"
                           onClick={() =>
                             dispatch(removeFromCart({ id: item.id }))
                           }
@@ -52,70 +79,79 @@ function Cart() {
                           <i className="fas fa-trash"></i> Remove
                         </button>
                       </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div>
-                      <button
-                        onClick={() => dispatch(decrement({ id: item.id }))}
-                      >
-                        -
-                      </button>
-                      <span>{item.quantity}</span>
-                      <button
-                        onClick={() => dispatch(increment({ id: item.id }))}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </td>
-                  <td>
-                    <p>${(item.price * item.quantity).toFixed(2)}</p>
-                    <p>({item.price?.toFixed(2)} x 1 item)</p>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                    </td>
+                    <td>
+                      <div>
+                        <button
+                          className="minus"
+                          onClick={() => dispatch(decrement({ id: item.id }))}
+                        >
+                          -
+                        </button>
+                        <span className="quantity">{item.quantity}</span>
+                        <button
+                          className="plus"
+                          onClick={() => dispatch(increment({ id: item.id }))}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </td>
+                    <td>
+                      <p className="itemtotal">
+                        N{(item.price * item.quantity).toFixed(2)}
+                      </p>
+                      <p className="itemprice">
+                        N({item.price?.toFixed(2)} x 1 item)
+                      </p>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        <section className="cartSummary">
-          <div className="orderSummaryDiv">
-            <div className="orderSummary1">
-              <h3>Order Summary</h3>
+        <section className="orders">
+          <div className="ordersummary">
+            <div className="totalquantity">
+              <p>Order Summary</p>
               <p>{totalQuantity} items</p>
             </div>
-            <div className="deliveryCharges">
-              <h5>Delivery Charges</h5>
+            <div className="deliverycharges">
+              <p>Delivery Charges</p>
               <p>
                 Add your delivery address to checkout to see delivery charges
               </p>
             </div>
           </div>
-          <div className="subTotalDiv">
-            <div className="subTotal">
-              <h5>SubTotal</h5>
-              <p>${calculateTotalPrice()}</p>
+          <div className="subtotal">
+            <div className="sub">
+              <p>SubTotal</p>
+              <p>N{calculateTotalPrice()}</p>
             </div>
-            <div className="subTotal">
+            <div className="total">
               <h4>Total</h4>
-              <p className="totalPrice">${calculateTotalPrice()}</p>
-            </div>
-            <div className="subTotalLastPDiv">
-              <p>Excluding Delivery Charges</p>
+              <p>N{calculateTotalPrice()}</p>
             </div>
           </div>
+          <div className="exclude">
+            <p>Excluding Delivery Charges</p>
+          </div>
 
-          <div className="checkoutButton">
-            <button>Proceed to Checkout</button>
-            <div>
-              <img src="" alt="" />
-              <img src="" alt="" />
-              <img src="" alt="" />
+          <div className="checkoutbtn">
+            <button>
+              <span>Proceed to Checkout</span>
+            </button>
+            <div className="payment">
+              <img src={require("../../assets/cart/paystack.svg")} alt="" />
+              <img src={require("../../assets/cart/mastercard.svg")} alt="" />
+              <img src={require("../../assets/cart/visa.svg")} alt="" />
             </div>
           </div>
         </section>
       </main>
+      <ProductsList />
       <Footer />
     </>
   );
