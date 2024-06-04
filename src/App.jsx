@@ -2,18 +2,32 @@ import { useState } from "react";
 import LandingPage from "./pages/landing_page/LandingPage";
 import ProductsList from "./pages/landing_page/ProductsList";
 import ProductDetails from "./pages/landing_page/ProductDetails";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+  {
+    path: "/product/:id",
+    element: <ProductDetails />,
+  },
+]);
 
 function App() {
   return (
-    <Router>
-      <>
-        <Routes>
-          <Route exact path="/" element={<LandingPage />}></Route>{" "}
-          <Route path="/product/:id" element={<ProductDetails />} />
-        </Routes>
-      </>
-    </Router>
+    <>
+      <RouterProvider router={router} />
+    </>
+
+    // <Router>
+    //   <>
+    //     <Routes>
+    //       <Route exact path="/" element={<LandingPage />}></Route>{" "}
+    //       <Route path="/product/:id" element={<ProductDetails />} />
+    //     </Routes>
+    //   </>
+    // </Router>
   );
 }
 
