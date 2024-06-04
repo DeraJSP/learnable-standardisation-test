@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 // import * as LandingImages from "../../components/LandingImages";
 // import Importer from "../../components/Importer";
 
 export default function NavBar() {
+	const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
 	return (
 		<>
 			<nav>
@@ -49,9 +52,10 @@ export default function NavBar() {
 				<div className="lightnavwrap">
 					<div className="lightnav">
 						<div className="sitesections">
-							<h3 className="logo">Bandage</h3>
-
-							<Link to="">
+							<Link to="/">
+								<h3 className="logo">Bandage</h3>
+							</Link>
+							<Link to="/">
 								<p>Home</p>
 							</Link>
 							<Link to="">
@@ -86,12 +90,18 @@ export default function NavBar() {
 									alt="search"
 								/>
 							</div>
-							<Link to="/Cart">
-								<img
-									src={require("../../assets/landing_page/cart.svg")}
-									alt="cart"
-								/>
-							</Link>
+							<div className="cartlink">
+								<Link to="/Cart">
+									{" "}
+									<div className="carttotal">
+										<img
+											src={require("../../assets/landing_page/cart.svg")}
+											alt="cart"
+										/>
+										<p>{totalQuantity}</p>
+									</div>
+								</Link>
+							</div>
 							<div>
 								<img
 									src={require("../../assets/landing_page/fav.svg")}
